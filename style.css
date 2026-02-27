@@ -83,7 +83,7 @@ ul {
 }
 
 .nav.scrolled {
-    background: rgba(15, 23, 42, 0.96);
+    background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 12px 0;
@@ -106,16 +106,35 @@ ul {
     letter-spacing: -0.5px;
 }
 
+.nav-logo-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .nav-links {
     display: flex;
-    gap: 36px;
+    gap: 24px;
     align-items: center;
 }
 
 .nav-links a {
     color: rgba(255, 255, 255, .75);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 300;
+    transition: var(--transition);
+}
+
+.nav-links .nav-links-cta {
+    color: rgba(255, 255, 255, 1);
+    font-size: 15px;
+    font-weight: 600;
+    transition: var(--transition);
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 7px;
     transition: var(--transition);
 }
 
@@ -285,7 +304,7 @@ ul {
 
 /* Buttons */
 .hero-actions {
-    display: flex;
+    display: inline-flex;
     gap: 14px;
     justify-content: center;
     flex-wrap: wrap;
@@ -384,9 +403,10 @@ ul {
     color: rgba(255, 255, 255, .32);
     font-size: 11px;
     margin-top: 48px;
+    top: 7em;
     letter-spacing: .5px;
     text-transform: uppercase;
-    animation: float 2.4s ease-in-out infinite;
+    animation: float 2.1s ease-in-out infinite;
 }
 
 @keyframes float {
