@@ -17,12 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ── Content Protection ── */
-        * { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-        input, textarea { user-select: text !important; -webkit-user-select: text !important; }
-        img { pointer-events: none; -webkit-user-drag: none; user-drag: none; }
-    </style>
 </head>
 
 <body>
@@ -361,7 +355,7 @@
                     <h4 class="block-label">Key Deliverables</h4>
                     <div class="deliverables-grid">
                         <div class="deliverable-item animate-in">
-                            <div class="deliverable-icon"></div>
+                            <div class="deliverable-icon">🏗️</div>
                             <div>
                                 <strong>3-Layer HIPAA-Compliant Cloud Architecture</strong>
                                 <p>Public WordPress site (Hostinger) → Operational platform (Salesforce NPSP / Firebase)
@@ -370,7 +364,7 @@
                             </div>
                         </div>
                         <div class="deliverable-item animate-in">
-                            <div class="deliverable-icon"></div>
+                            <div class="deliverable-icon">🗂️</div>
                             <div>
                                 <strong>10 Integrated Management Systems</strong>
                                 <p>Full architecture for Client Management, Family &amp; Youth Services, Vocational
@@ -379,7 +373,7 @@
                             </div>
                         </div>
                         <div class="deliverable-item animate-in">
-                            <div class="deliverable-icon"></div>
+                            <div class="deliverable-icon">💳</div>
                             <div>
                                 <strong>Payment &amp; Platform API Integrations</strong>
                                 <p>Stripe and Donorbox for PCI-compliant donation processing; Cloudflare for DNS
@@ -388,7 +382,7 @@
                             </div>
                         </div>
                         <div class="deliverable-item animate-in">
-                            <div class="deliverable-icon"></div>
+                            <div class="deliverable-icon">🌐</div>
                             <div>
                                 <strong>Website &amp; Brand Identity System</strong>
                                 <p>Public-facing WordPress site with full UI/UX design; complete brand identity
@@ -397,7 +391,7 @@
                             </div>
                         </div>
                         <div class="deliverable-item animate-in">
-                            <div class="deliverable-icon"></div>
+                            <div class="deliverable-icon">📋</div>
                             <div>
                                 <strong>150+ Form &amp; Workflow Specifications</strong>
                                 <p>Detailed form schemas, data flow diagrams, conditional logic, role-based access
@@ -406,7 +400,7 @@
                             </div>
                         </div>
                         <div class="deliverable-item animate-in">
-                            <div class="deliverable-icon"></div>
+                            <div class="deliverable-icon">📄</div>
                             <div>
                                 <strong>Funder-Ready Documentation Package</strong>
                                 <p>Organizational overview, 5-phase development timeline, funder readiness assessment,
@@ -818,67 +812,12 @@
                     <a href="https://linkedin.com/in/damariusmcnair" target="_blank" rel="noopener noreferrer"
                         id="footerLinkedin">LinkedIn</a>
                 </div>
-                <p class="footer-copy">&copy; 2025 Damarius McNair</p>
+                <p class="footer-copy">&copy; 2025 Damarius McNair. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- =================== PROTECTION SCRIPT =================== -->
-    <div id="devtools-warning" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.97);color:#fff;font-family:inherit;font-size:1.4rem;font-weight:700;align-items:center;justify-content:center;text-align:center;z-index:99999;flex-direction:column;gap:1rem;padding:2rem;">
-        🔒 Access Restricted
-        <p style="color:#888;font-size:0.85rem;font-weight:400;">Close developer tools to continue viewing this portfolio.</p>
-    </div>
-
-    <script>
-        // 1. Disable right-click
-        document.addEventListener('contextmenu', e => e.preventDefault());
-
-        // 2. Disable keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            const key = e.key.toLowerCase();
-            const ctrl = e.ctrlKey || e.metaKey;
-
-            // Ctrl+C, X, A, U (view-source), S (save), P (print)
-            if (ctrl && ['c','x','a','u','s','p'].includes(key)) {
-                e.preventDefault(); return false;
-            }
-            // F12
-            if (e.key === 'F12') { e.preventDefault(); return false; }
-            // Ctrl+Shift+I / J / C  (DevTools panels)
-            if (ctrl && e.shiftKey && ['i','j','c'].includes(key)) {
-                e.preventDefault(); return false;
-            }
-        });
-
-        // 3. Disable copy / cut / paste events
-        document.addEventListener('copy',  e => e.preventDefault());
-        document.addEventListener('cut',   e => e.preventDefault());
-
-        // 4. Disable drag (protects images)
-        document.addEventListener('dragstart', e => e.preventDefault());
-
-        // 5. DevTools size detection
-        function checkDevTools() {
-            const wDiff = window.outerWidth  - window.innerWidth;
-            const hDiff = window.outerHeight - window.innerHeight;
-            const el = document.getElementById('devtools-warning');
-            if (wDiff > 160 || hDiff > 160) {
-                el.style.display = 'flex';
-                document.body.style.filter = 'blur(10px)';
-                document.body.style.pointerEvents = 'none';
-            } else {
-                el.style.display = 'none';
-                document.body.style.filter = '';
-                document.body.style.pointerEvents = '';
-            }
-        }
-        setInterval(checkDevTools, 800);
-        window.addEventListener('resize', checkDevTools);
-
-        // 6. Debugger trap — makes DevTools console painful to use
-        (function trap() { setInterval(function(){ debugger; }, 50); })();
-    </script>
-
     <script src="script.js"></script>
 </body>
+
 </html>
